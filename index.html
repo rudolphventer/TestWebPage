@@ -1,6 +1,13 @@
 <base href="./">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 Hello World
+
+<ul id="example-1">
+    <li v-for="item in items" :key="item.message">
+      {{ item.message }}
+    </li>
+  </ul>
 
 <script>
 	function apiCall()
@@ -9,7 +16,12 @@ Hello World
 		fetch("https://reqres.in/api/users?page=2")
         .then(result => result.json())
         .then(res => {
-            console.log(res);
+            var example1 = new Vue({
+            el: '#example-1',
+            data: {
+                items: res
+            }
+            })
         })
 		
 	}
