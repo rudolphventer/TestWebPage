@@ -7,7 +7,7 @@ Hello World
 	{
 		console.log(1);
 		var users = await fetch("https://reqres.in/api/users?page=2");
-		console.log(users[0]);
+		console.log(users.data[0]);
 	}
     apiCall();
 </script>
