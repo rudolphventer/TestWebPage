@@ -1,33 +1,27 @@
-<base href="./">
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-<body>
-    Hello World
+<!doctype html>
 
-    <ul id="example-1">
-        <li v-for="item in items" :key="item.message">
-          {{ item.email }}
-        </li>
-      </ul>
-    
-    <script>
-        function apiCall()
-        {
-            console.log(1);
-            fetch("https://reqres.in/api/users?page=2")
-            .then(result => result.json())
-            .then(res => {
-                console.log(res.data[0].id)
-                var example1 = new Vue({
-                el: '#example-1',
-                data: {
-                    items: res.data
-                }
-                })
-            })
-            
-        }
-        apiCall();
-    </script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+  <img src="/public/NewLogosquarelight.png" class="logo" alt="Image goes here"/>
+  <!--
+    <div class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+  </div>
+  -->
+  <div class="card"></div>
 </body>
+</html>
